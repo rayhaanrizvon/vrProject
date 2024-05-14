@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="game.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//unpkg.com/aframe-extras@4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+
+</head>
+
+
+
+
+<body>
+
+    <a-scene start-game physics = "debug: ture; friction 0.5; restitution: 0.8; gravity: -11">
+        <a-camera kinematic body = "radius: 1.8"></a-camera>
+
+        <a-entity movement-controls kinematic-body="radius: 1.8">
+            <a-entity camera look-controls="pointerLockEnabled: true" position="0 1.8 0"></a-entity>
+        
+        <a-entity environment="preset: forest"></a-entity>
+
+        <a-plane static-body color="blue" rotation="-90 0 0" width="50" height="50"></a-plane>
+        <a-gltf-model src="futuristic_spaceship/scene.gltf" scale="1.5 1.5 1.5"></a-gltf-model>
+
+  </a-entity>
+  
+  
+    
+    </a-scene>
+  </body>
+
+
+  </html>
